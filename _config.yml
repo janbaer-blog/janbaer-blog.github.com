@@ -1,5 +1,5 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Jan's Weblog
+description:      My personal weblog
 logo:             site-logo.png
 disqus_shortname:
 search:           true
@@ -31,15 +31,11 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
-    url: /about
+  - title: Homepage
+    external: true
+    url: www.janbaer.de
   - title: Articles
     url: /articles
-  - title: Theme Setup
-    url: /theme-setup
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Berlin
