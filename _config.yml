@@ -9,7 +9,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Jan's Weblog
-tagline: Site Tagline
+tagline: my personal weblog
 author :
   name : Jan Baer
   email : jan@janbaer.de

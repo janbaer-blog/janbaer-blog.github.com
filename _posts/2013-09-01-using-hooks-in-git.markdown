@@ -18,24 +18,24 @@ Nun möchte ich, das, sobald ich einen Commit in meinem Source Repository gemach
 Um den Vorgang zu automatisieren, habe ich im Unterordner **.git/hooks** die Datei **post-commit-sample** in **post-commit** umbenannt und mit **chmod** aus ausführbar markiert.
 
 ```
-cd .git/hooks
-mv post-commit-sample post-commit
-chmod +x post-commit
-cd ../..
+  cd .git/hooks
+  mv post-commit-sample post-commit
+  chmod +x post-commit
+  cd ../..
 ```
 
 In die **post-commit** Datei habe ich jetzt folgende Befehle eingefügt
 
 ```
-message=$(git log -1 HEAD --pretty=format:%s)
-git push
-markdoc build
-pushd .
-cd ~/DropBox/WebSites/wiki
-git add .
-git commit -m "$message"
-git push
-popd .
+	message=$(git log -1 HEAD --pretty=format:%s)
+	git push
+	markdoc build
+	pushd .
+	cd ~/DropBox/WebSites/wiki
+	git add .
+	git commit -m "$message"
+	git push
+	popd .
 ```
 
 
