@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Using hooks in git"
+description: ""
 date: 2013-09-01
-categories: [git]
+category: develop
+tags: [git]
+comments: false
 ---
 
 Wenn man nach "git hooks" sucht, findet man jede Menge Links zu guten Beschreibungen, was es für verschiedene Hooks in Git gibt und was man alles damit machen kann.
@@ -17,16 +20,16 @@ Nun möchte ich, das, sobald ich einen Commit in meinem Source Repository gemach
 
 Um den Vorgang zu automatisieren, habe ich im Unterordner **.git/hooks** die Datei **post-commit-sample** in **post-commit** umbenannt und mit **chmod** aus ausführbar markiert.
 
-```
+{% highlight bash %}
   cd .git/hooks
   mv post-commit-sample post-commit
   chmod +x post-commit
   cd ../..
-```
+{% endhighlight %}
 
 In die **post-commit** Datei habe ich jetzt folgende Befehle eingefügt
 
-```
+{% highlight bash %}
 	message=$(git log -1 HEAD --pretty=format:%s)
 	git push
 	markdoc build
@@ -36,7 +39,7 @@ In die **post-commit** Datei habe ich jetzt folgende Befehle eingefügt
 	git commit -m "$message"
 	git push
 	popd .
-```
+{% endhighlight %}
 
 
 In der ersten Zeile hole ich mir die Commit-Message aus meinem letzten Commit, damit ich diese an Commit für das zweite Git-Repository verwenden kann. Danach werden zuerst mal meine Änderungen auf Github gepusht. Über **markdoc build** werden die neuen HTML-Dateien erstellt. Danach wechsle ich in das Verzeichnis, in dem sich mein zweites Git-Repository befindet und führe dort die nötigen Git-Befehle aus, um die neuen oder geänderten Dateien zu commiten und zu Github zu pushen.

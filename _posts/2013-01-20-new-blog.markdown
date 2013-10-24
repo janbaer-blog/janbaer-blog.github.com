@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "New Blog"
+description: ""
 date: 2013-01-20
-categories: [Allgemeines]
+category: Allgemeines
+tags: []
+comments: false
 ---
 
 Dies ist der erste Eintrag in meinem neuen Entwickler Blog. Wie der Name schon sagt, werde ich hier ausschließlich über Themen aus der Entwicklung berichten. Das Blog ist zwar public, aber ich schreibe hier eigentlich nur Dinge auf, die mir während meiner täglichen Arbeit und beim Erlernen von neuen Technologien so auffallen und die ich für Aufhebenswert halte. Die Beiträge darf jeder Lesen und auch gerne kommentieren.
