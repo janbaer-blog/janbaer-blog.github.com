@@ -33,7 +33,7 @@ bing_verify:
 links:
   - title: Homepage
     external: true
-    url: www.janbaer.de
+    url: http://www.janbaer.de
   - title: Articles
     url: /articles
 
