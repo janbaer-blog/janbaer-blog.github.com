@@ -1,0 +1,20 @@
+---
+layout: post
+title: "New Blog"
+date: 2013-01-20
+categories: [Allgemeines]
+---
+
+Dies ist der erste Eintrag in meinem neuen Entwickler Blog. Wie der Name schon sagt, werde ich hier ausschließlich über Themen aus der Entwicklung berichten. Das Blog ist zwar public, aber ich schreibe hier eigentlich nur Dinge auf, die mir während meiner täglichen Arbeit und beim Erlernen von neuen Technologien so auffallen und die ich für Aufhebenswert halte. Die Beiträge darf jeder Lesen und auch gerne kommentieren.
+
+-------
+
+Da ich im letzten Jahr ein großer Fan von [Git](http://git-scm.com) und [Markdown](http://daringfireball.net/projects/markdown/) geworden bin, ist es ein logischer Schritt, zum Bloggen eine Kombination aus beidem zu verwenden. Und das beste, was ich dazu gefunden habe, ist [Octopress](http://octopress.org/), einer Bloggingengine, die mit **Ruby on rails** zwar eine mir nicht ganz so vertraute Umgebung verwendet, aber da ich in den letzten Jahren immer mehr auf dem Mac zu Hause bin, war die Einrichtung der notwendigen Komponenten eigentlich in 5 Minuten erledigt. Mein Blog wird im Moment bei [Heroku](http://www.heroku.com) gehostet. Die zwei großen Vorteile für mich sind, das es zum einen kostenlos ist und zum anderen, ich auch meine eigene [Subdomain](http://devblog.janbaer.de) darauf umleiten kann.
+
+-------
+
+Als Editor verwende ich [Sublime Text 2](http://www.sublimetext.com/2), den im meinen Augen im Moment bestem Editor, den es auf dem Markt gibt. Er ist für alle gängigen Betriebssysteme verfügbar und ist flexibel durch eine Menge von coolen Packages erweiterbar. Unter anderem gibt es natürlich Packages für Syntax Highlighting und der HTML-Vorschau von Markdown. Ausserdem gibt es noch viele weitere interessante und coole Plugins. Die Packages sind wie auch Sublime Text selbst, komplett in Python geschrieben und da ich im letzten Jahr einen 1-tages Workshop über Python Entwicklung besucht habe, kann ich bestehende Plugins an meine Bedürfnisse anpassen, wenn es denn notwendig ist, oder vielleicht sogar selber welche schreiben.
+
+-------
+
+Die Hauptgebiete in der Entwicklung, in denen ich mich im Moment bewegen, ist .NET und C# sowie JavaScript für Webanwendungen. Um diese beiden Themen wird sich dieses Blog überwiegend auch fokussieren, da ich aber immer bestrebt bin, neue Technologieen zu evaluieren und zu erlernen, können natürlich andere Themengebiete dazu kommen.
