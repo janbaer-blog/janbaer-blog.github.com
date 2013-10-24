@@ -9,12 +9,12 @@ In my latest project I learned some thinks about the performance of Linq when yo
 
 To generate a dictionary very quick, you can use an extension method from the **System.Linq**	 namespace. With the following code you can do this very easy
 
-{% codeblock lang:csharp %}
+```
 items.ToDictionary(i => i.Id);
-{% endcodeblock %}
+```
 
 The same experience I have made with the query for any items with the same key. The Linq function **SelectMany** was in summary to slow. In this situation you can't use a dictionary because the key isn't unique. But Linq has also an Extension method to solve this problem. With the **ToLookup** function you can generate a very fast lookup table.
 
-{% codeblock lang:csharp %}
+```
 items.ToLookup(i => i.{PropertyToLookup});
-{% endcodeblock %}
+```

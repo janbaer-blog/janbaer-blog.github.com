@@ -12,22 +12,22 @@ Ich hatte mich entschieden, das Script mit Powershell zu erstellen, da es hier s
 
 Um dieses Modul allerdings zu verwenden, muss man es in Powershell erst einmal importieren. Das macht man ganz einfach mit foldener Codezeile.
 
-{% codeblock lang:powershell  %}
+```
 Import-Module -Name WebAdministration
-{% endcodeblock %}
+```
 
 Damit das Module importiert werden kann, muss der IIS mit den Management Services installiert sein. Will man prüfen, ob das Modul auch wirklich installiert ist, so kann man das mit folgendem Code machen und im negativen Fall den Benutzer darauf hinweisen.
 
-{% codeblock lang:powershell  %}
+```
 if ((get-module -name WebAdministration -erroraction silentlycontinue) -eq $false) {
     Write-Host "The Powershell module for WebAdministration is not installed! Please check your IIS installation!" -f Red
 	return
 }
-{% endcodeblock %}
+```
 
 Die Website erstellt man dann mit folgendem Code
 
-{% codeblock lang:powershell  %}
+```
 $integrated = 0
 New-WebAppPool -Name $appPoolName
 Set-ItemProperty IIS:AppPools\$appPoolName managedRuntimeVersion v4.0
@@ -35,24 +35,24 @@ Set-ItemProperty IIS:AppPools\$appPoolName managedPipelineMode $integrated
 New-Website -Name $webServiceName -PhysicalPath $directoryPath -ApplicationPool $appPoolName
 Remove-WebBinding -Name $webServiceName
 New-WebBinding -Name $webServiceName -IPAddress "*" -Port $port -HostHeader $webServiceName
-{% endcodeblock %}
+```
 
 Seit IIS7 ist es so, das der AppPool nicht mehr wie früher mit dem Account **NetworkService** läuft sondern es dafür eigene **IIS AppPool** Identities gibt. Wenn man einen neuen AppPool erstellt, läuft dieser unter dem Benutzer **IIS AppPools\AppPoolname**. Es müssen diesem Benutzer noch die Zugriffsrechte auf das Verzeichnis gegeben werden. Normalerweise sollten diesem Benutzer nur auf bestimmte Verzeichniss, wie das Log-Verzeichnis Schreibrechte gegeben werden. Auf die anderen Verzeichniss reichen Lesezugriffsrechte. Auch hierfür hat die Powershell schon die notwendigen Commandlets an Board.
 
-{% codeblock lang:powershell  %}
+```
 $acl = Get-Acl -Path $directory
 $userAccount = New-Object System.Security.Principal.NTAccount("IIS AppPool", $userName)
 $permission = $userAccount, $right, "ContainerInherit,ObjectInherit", "None", "Allow"
 $right = New-Object System.Security.AccessControl.FileSystemAccessRule $permission
 $acl.SetAccessRule($right)
 Set-Acl -AclObject $acl -Path $directory
-{% endcodeblock %}
+```
 
 Die meisten Codebeispiele erstellen die Permission mit der folgenden Codezeile
 
-{% codeblock lang:powershell  %}
+```
 $permission = $userAccount, $right
-{% endcodeblock %}
+```
 
 Das hat aber den Nachteil, das sich diese Berechtigung nicht auf neue Unterordner veerbt. Deswegen ist die erste Variante in den meisten Fällen sicher die zu bevorzugende.
 
