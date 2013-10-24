@@ -8,7 +8,7 @@ url:              http://blog.janbaer.de
 # Owner/author information
 owner:
   name:           Jan Baer
-  avatar:         bio-photo.jpg
+  avatar:
   email:          jan@janbaer.de
   # Social networking links used in footer. Update and remove as you like.
   twitter:        reabnaj
