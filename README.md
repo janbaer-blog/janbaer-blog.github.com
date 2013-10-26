@@ -1,149 +1,72 @@
-# So Simple Theme
+# Lagom
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the followup to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes/) -- by designer slash illustrator [Michael Rose](http://mademistakes.com).
+> #### *Lagom* is a Swedish word with no direct English equivalent, meaning "just the right amount"
 
-## So Simple Theme is all about:
+Lagom, a [Jekyll][j] blog theme with just the right amount of style. 
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations. 
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Disqus comments if you choose to enable.
-* Simple and clear permalink structure[^1].
-* Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience.
-* Vanilla [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/articles/so-simple-theme/code-highlighting-post/) to make your code examples look snazzy.
-* Simple search that overlays results based on post title.
-* Grunt build script for easier theme development.
-* [Sitemap](https://github.com/mmistakes/so-simple-theme/blob/master/sitemap.xml) for search engines
+Extracted lovingly from [http://mdswanson.com][mds] for your enjoyment!
 
-![screenshot of So Simple Theme](http://mmistakes.github.io/so-simple-theme/images/so-simple-theme-preview.jpg)
+* Responsive, based on [Skeleton][skeleton]
+* [Font Awesome][font-awesome] for icons
+* Open Sans from [Google web fonts][gfonts]
+* Built-in Atom RSS feed
 
-General notes and suggestions for customizing So Simple Theme.
+## Action Shots
+![](http://i.imgur.com/Pmzk4j1.png)
+![](http://i.imgur.com/CT2Xvug.png)
+![](http://i.imgur.com/XisjqW1.jpg)
 
----
+## Installation
 
-## Basic Setup for new Jekyll site
+- Install Jekyll: `gem install jekyll`
+- [Fork this repository][fork]
+- Clone it: `git clone https://github.com/YOUR-USER/lagom`
+- Run the jekyll server: `jekyll serve`
 
-1. [Install Jekyll](http://jekyllrb.com) and read through the documentation if you haven't already.
-2. Fork the [So Simple Theme repo](https://github.com/mmistakes/so-simple-theme/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
-6. Read the documentation below for further customization pointers and documentation.
-
-[Download the Theme](http://mmistakes.github.io/so-simple-theme)
-
-**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
-
----
-
-## Setup for Existing Jekyll site
-
-1. Clone the following folders: `_includes`, `_layouts`, `assets`, and `images`.
-2. Clone the following files and personalize content as need: `about.md`, `articles.html`, `index.html`, `tags.html`, `feed.xml`, and `sitemap.xml`.
-3. Set the following variables in your `config.yml` file:
-
-``` yaml
-title:            Site Title
-description:      Site description for the metas.
-logo:             site-logo.png
-disqus_shortname: shortname
-search:           true
-#Comment out url when working locally to resolve base urls correctly
-url:              http://whatever.com
-
-# Owner/author information
-owner:
-  name:           Your Name
-  avatar:         your-photo.jpg
-  email:          your@email.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:
-  linkedin:
-  instagram:
-  tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    "http://plus.google.com/123123123123132123"
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
-  - title: Articles
-    url: /articles
-  - title: Google
-    url: http://google.com
-    external: true
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-pygments:    true
-markdown:    kramdown
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-```
-
----
-
-## Folder Structure
-
-``` bash
-so-simple-theme/
-├── _includes/
-|    ├── browser-upgrade.html  #prompt to upgrade browser on < IE8
-|    ├── footer.html  #site footer
-|    ├── head.html  #site head
-|    ├── navigation.html #site navigation and masthead
-|    └── scripts.html  #jQuery, plugins, GA, etc.
-├── _layouts/
-|    ├── page.html  #page layout
-|    └── post.html  #post layout
-├── _posts/
-├── assets/
-|    ├── css/  #preprocessed less styles
-|    ├── fonts/  #icon webfonts
-|    ├── js/
-|    |   ├── _main.js  #main JavaScript file, plugin settings, etc
-|    |   ├── plugins  #jQuery plugins
-|    |   └── vendor/  #jQuery and Modernizr
-|    └── less/
-├── images  #images for posts and pages
-├── _config.yml  #Jekyll site options
-├── about.md  #about page
-├── articles.md  #lists all posts from latest to oldest
-├── index.html  #homepage. lists 10 latest posts
-├── tags.html  #lists all posts sorted by tag
-└── sitemap.xml  #autogenerated sitemap for search engines
-```
-
----
+You should have a server up and running locally at <http://localhost:4000>.
 
 ## Customization
 
-For full customization details and more information on the theme check out the [So Simple theme setup guide](http://mmistakes.github.io/so-simple-theme/theme-setup/).
+Next you'll want to change a few things. Most of them can be changed directly in
+[_config.yml][config]. That's where you can add your social links, change the accent
+color, stuff like that.
 
----
+There's a few other places that you'll want to change, too:
 
-## Questions?
+- [CNAME][cname]: If you're using this on GitHub Pages with a custom domain name, 
+  you'll want to change this to be the domain you're going to use. All that should 
+  be in here is a domain name on the first line and nothing else (like: `example.com`).
+- [favicon.png][favicon]: This is the icon in your browser's address bar. You should 
+  change it to whatever you'd like.
+- [logo.png][logo]: A square-ish image that appears in the upper-left corner
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/so-simple-theme/issues/new).
+## Deployment
 
----
+You should deploy with [GitHub Pages][pages] - it's just easier.
 
-## License
+All you should have to do is rename your repository on GitHub to be
+`username.github.io`. Since everything is on the `gh-pages` branch, you
+should be able to see your new site at <http://username.github.io>.
 
-This theme is free and open source software, distributed under the [GNU General Public License](LICENSE) version 2 or later. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+## Licensing
 
-If you'd like to give me credit somewhere on your blog or tweet a shout out to [@mmistakes](https://twitter.com/mmistakes), that would be pretty sweet.
+[MIT](https://github.com/swanson/lagom/blob/master/LICENSE) with no
+added caveats, so feel free to use this on your site without linking back to
+me or using a disclaimer or anything silly like that.
+
+## Contact
+I'd love to hear from you at [@_swanson][twitter]. Feel free to open issues if you
+run into trouble or have suggestions. Pull Requests always welcome.
+
+[j]: http://jekyllrb.com/
+[mds]: http://mdswanson.com
+[skeleton]: http://www.getskeleton.com/
+[font-awesome]: http://fortawesome.github.io/Font-Awesome/
+[gfonts]: http://www.google.com/fonts/specimen/Open+Sans
+[fork]: https://github.com/swanson/lagom/fork
+[config]: https://github.com/swanson/lagom/blob/master/_config.yml
+[cname]: https://github.com/swanson/lagom/blob/master/CNAME
+[favicon]: https://github.com/swanson/lagom/blob/master/favicon.png
+[logo]: https://github.com/swanson/lagom/blob/master/logo.png
+[pages]: http://pages.github.com
+[twitter]: https://twitter.com/_swanson

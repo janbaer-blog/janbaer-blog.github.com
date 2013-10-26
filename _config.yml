@@ -1,64 +1,27 @@
-title:            Jan's Weblog
-description:      My personal weblog
-logo:             site-logo.png
-disqus_shortname:
-search:           true
-url:              http://blog.janbaer.de
+# General Jekyll Config
+pygments: true
+url: http://blog.janbaer.de
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore]
 
-# Owner/author information
-owner:
-  name:           Jan Baer
-  avatar:
-  email:          jan@janbaer.de
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        reabnaj
-  facebook:
-  github:         janbaer
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+# Theme customization - please change from the defaults!
+theme:
+  # Color for top bar, links, etc
+  highlight_color: '#1B4D94'
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+  # Profile links on the left sidebar, leave blank to ignore
+  social:
+    github: janbaer
+    twitter: reabnaj
+    hacker_news:
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Homepage
-    external: true
-    url: http://www.janbaer.de
-  - title: Articles
-    url: /articles
+  # "Hi, I'm _______"
+  name: Jan Baer
+  email: jan@janbaer.de
+  tagline: "Softwaredeveloper and -craftsman"
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Europe/Berlin
-future:      true
-pygments:    true
-markdown:    kramdown
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-6811781-2
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+  # Toggle "Postings are my own" disclaimer in footer
+  show_disclaimer: true
