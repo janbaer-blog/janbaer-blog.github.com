@@ -2,7 +2,7 @@
 layout: post
 title: "Reisebericht Indien"
 description: "Ein Fazit unseres Urlaubes in Indien"
-date: 2013-10-27
+date: 2013-10-26
 category: Urlaub
 tags: [urlaub, reisebericht, indien]
 comments: true
