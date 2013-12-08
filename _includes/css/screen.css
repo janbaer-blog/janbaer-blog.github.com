@@ -42,6 +42,12 @@ h3 {
   margin: 1em 0;
 }
 
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
 ul {
   margin: 1em 0;
   list-style: disc;
@@ -234,7 +240,7 @@ span.icon-hn {
   text-align: center;
 }
 
-.footnotes { 
+.footnotes {
   font-size: 14px;
   font-style: italic;
 }
@@ -248,8 +254,8 @@ span.icon-hn {
 }
 
 .caption {
-  margin: 0 auto; 
-  text-align: center; 
-  font-size: smaller; 
+  margin: 0 auto;
+  text-align: center;
+  font-size: smaller;
   padding-bottom: 10px
 }
