@@ -2,8 +2,8 @@
 layout: post
 title: "Find out which process uses my port"
 description: ""
-date: 2013-01-20
-category: Dev
+date: 2013-12-08
+category: develop
 tags: [node.js, system, macos]
 comments: false
 ---
@@ -15,6 +15,6 @@ Now I've tried to find out wich process uses the port. For that I entered the fo
 
   lsof -i :3000
 
-Now I got the process id of the process that is using the port. With the pid it's now very simple to kill the process with the following command.
+This command returns me informations about the process that is using my port. With the processid I'm now be able to kill the process.
 
   kill -9 11381
