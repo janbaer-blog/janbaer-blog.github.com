@@ -16,7 +16,7 @@ To generate a dictionary very quick, you can use an extension method from the **
 items.ToDictionary(i => i.Id);
 {% endhighlight %}
 
-The same experience I have made with the query for any items with the same key. The Linq function **SelectMany** was in summary to slow. In this situation you can't use a dictionary because the key isn't unique. But Linq has also an Extension method to solve this problem. With the **ToLookup** function you can generate a very fast lookup table.
+The same experience I made with the query for any items with the same key. The Linq function **SelectMany** was in summary to slow. In this situation you can't use a dictionary because the key isn't unique. But Linq has also an Extension method to solve this problem. With the **ToLookup** function you can generate a very fast lookup table.
 
 {% highlight c# %}
 items.ToLookup(i => i.{PropertyToLookup});
